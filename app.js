@@ -4,6 +4,7 @@ import cors from 'cors'
 import connectDB from './config/connect.js'
 import { PORT } from './config/config.js'
 import userRoutes from "./routes/user.js"
+import busRoutes from "./routes/bus.js"
 
 dotenv.config()
 
@@ -22,6 +23,7 @@ app.use(express.json())
 
 // Routes
 app.use("/user", userRoutes)
+app.use("/bus", busRoutes)
 
 const start = async () => {
     try {
