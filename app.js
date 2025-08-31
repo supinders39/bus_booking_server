@@ -5,6 +5,7 @@ import connectDB from './config/connect.js'
 import { PORT } from './config/config.js'
 import userRoutes from "./routes/user.js"
 import busRoutes from "./routes/bus.js"
+import ticketRoutes from "./routes/ticket.js"
 
 dotenv.config()
 
@@ -24,6 +25,7 @@ app.use(express.json())
 // Routes
 app.use("/user", userRoutes)
 app.use("/bus", busRoutes)
+app.use("/ticket", ticketRoutes)
 
 const start = async () => {
     try {
