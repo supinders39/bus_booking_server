@@ -26,7 +26,7 @@ const authenticate = async (email, password) => {
     return null
 }
 
-export const buildAdminJS = async (req, res) => {
+export const buildAdminJS = async (app) => {
     const admin = new AdminJS({
         resources: [{ resource: User }, { resource: Bus }, { resource: Ticket }],
         branding: {
