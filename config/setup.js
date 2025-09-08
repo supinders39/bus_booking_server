@@ -64,4 +64,4 @@ export const buildAdminJS = async (app) => {
     );
 
     app.use(admin.options.rootPath, adminRouter)
-}
+} 

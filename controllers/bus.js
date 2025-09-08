@@ -13,7 +13,7 @@ export const getBusDetails = async (req, res) => {
             return res.status(404).json({error: "Bus not found"})
         }
 
-        res.status({
+        res.status(200).json({
             success: true,
             data: {
                 busId: bus.busId,
